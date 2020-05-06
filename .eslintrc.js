@@ -57,6 +57,8 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error', // 执行hooks的两个规则
         'react/no-array-index-key': 0,
         'import/no-cycle': 0, //两个util文件中 依赖循环了
+        '@typescript-eslint/camelcase': 0, // 关闭驼峰式命名
+        '@typescript-eslint/no-use-before-define': 0,
         // 自定义引入组件不需要加后缀
         "import/extensions": [
             "error",
@@ -72,7 +74,7 @@ module.exports = {
     //针对特定文件的配置
     overrides: [{
             files: ['*'],
-            excludedFiles: ['src/**/*'],
+            excludedFiles: ['src/**/*'], // 不匹配此选项
             rules: {
                 'import/no-extraneous-dependencies': 0,
                 '@typescript-eslint/no-var-requires': 0,
