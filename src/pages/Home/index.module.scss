@@ -1,122 +1,123 @@
 .main {
-    height: 100%;
-    background: #1f6396;
-    padding: 20px;
+  min-height: 100%;
+  background: #1f6396;
+  padding: 20px;
 }
 
 .head {
-    font-size: 30px;
-    color: #fff;
+  font-size: 30px;
+  color: #fff;
 }
 
 .context {
-    display: flex;
-    justify-content: center;
-    // height: 50%;
-    align-items: center;
-    flex-direction: column;
-    transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  // height: 50%;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s;
 }
 
 .context_normal {
-    margin-top: 200px;
+  margin-top: 200px;
 }
 
 .context_active {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 // 搜搜
 .content {
-    width: 800px;
-    >p {
-        text-align: center;
-        font-size: 34px;
-        color: #fff;
-        letter-spacing: 10px;
-    }
+  width: 800px;
+  > p {
+    text-align: center;
+    font-size: 34px;
+    color: #fff;
+    letter-spacing: 10px;
+  }
 }
 
 .tip {
-    margin: 50px 0 14px;
+  margin: 50px 0 14px;
 }
 
 .search {
-    padding: 0 30px;
-    background: #e48800;
-    color: #fff;
-    border-color: #e48800;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
-    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
-    // height: 40px;
-    font-size: 16px;
-    border-radius: 4px;
-    outline: 0;
-    text-align: center;
+  padding: 0 30px;
+  background: #e48800;
+  color: #fff;
+  border-color: #e48800;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  // height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: 0;
+  text-align: center;
 }
 
 // 结果
-.result {}
+.result {
+}
 
 .card {
-    width: 800px;
-    margin-top: 20px;
+  width: 800px;
+  margin-top: 20px;
 }
 
 .wcard {
-    width: 1200px;
-    margin-top: 20px;
+  width: 1200px;
+  margin-top: 20px;
 }
 
 .keyword {
-    color: red;
+  color: red;
 }
 
 :global {
-    .ant-btn-lg,
-    .ant-input-lg {
-        height: 46px;
-    }
-    .ant-input-group-addon {
-        background: none;
-    }
-    .ant-tag {
-        font-weight: bold;
-        padding: 3px 16px;
-        font-size: 16px;
-        color: #fff;
-        margin-right: 0;
-        cursor: pointer;
-        user-select: none;
-        transition: none;
-    }
-    .ant-tag-checkable-checked {
-        color: #1890ff;
-        background: #fff;
-        position: relative;
-    }
-    .ant-tag-checkable:active {
-        background-color: transparent,
-    }
-    .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
-        color: #fff;
-    }
-    .ant-tag-checkable-checked::before {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: -6px;
-        display: block;
-        width: 10px;
-        height: 10px;
-        background-color: #fff;
-        pointer-events: auto;
-        left: 50%;
-        transform: translateX(-50%) rotate(45deg);
-        transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-    }
-    .ant-card-small>.ant-card-body {
-        padding: 20px 12px;
-    }
+  .ant-btn-lg,
+  .ant-input-lg {
+    height: 46px;
+  }
+  .ant-input-group-addon {
+    background: none;
+  }
+  .ant-tag {
+    font-weight: bold;
+    padding: 3px 16px;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 0;
+    cursor: pointer;
+    user-select: none;
+    transition: none;
+  }
+  .ant-tag-checkable-checked {
+    color: #1890ff;
+    background: #fff;
+    position: relative;
+  }
+  .ant-tag-checkable:active {
+    background-color: transparent;
+  }
+  .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
+    color: #fff;
+  }
+  .ant-tag-checkable-checked::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    pointer-events: auto;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  }
+  .ant-card-small > .ant-card-body {
+    padding: 20px 12px;
+  }
 }
