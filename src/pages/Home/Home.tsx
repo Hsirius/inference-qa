@@ -8,6 +8,8 @@ import Searchs from './Search';
 import Text from './Text';
 import styles from './index.module.scss';
 import Tables from './Table';
+import Draggable from './Draggable';
+import Relation from './Relation';
 
 const Home: FC<RouteComponentProps> = ({ history }) => {
   const store = useLocalStore(() => ({
@@ -48,6 +50,12 @@ const Home: FC<RouteComponentProps> = ({ history }) => {
             </Card> */}
             <Card className={styles.wcard} title="线索依据" size="small">
               <Tables />
+            </Card>
+            <Card className={styles.wcard} title="推测来源" size="small">
+              <Draggable />
+            </Card>
+            <Card className={styles.wcard} title="关联分析" size="small">
+              <Relation />
             </Card>
           </div>
         )}
