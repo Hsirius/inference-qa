@@ -31,36 +31,34 @@ const Home: FC<RouteComponentProps> = ({ history }) => {
     // },
   }));
   return useObserver(() => (
-    <div className={styles.main}>
-      <div className={styles.head}>Inference & QA </div>
-      <div
-        className={cls(
-          styles.context,
-          store.activeState ? styles.context_active : styles.context_normal,
-        )}
-      >
-        <Searchs onChange={store.search} />
-        {store.activeState && (
-          <div className={styles.result}>
-            {/* <Card className={styles.card} title="答案" size="small">
-              <span>这是一段答案</span>
-            </Card>
-            <Card className={styles.card} title="推测来源" size="small">
-              <Text text={store.text} keywords={store.keywords} />
-            </Card> */}
-            <Card className={styles.wcard} title="线索依据" size="small">
-              <Tables />
-            </Card>
-            <Card className={styles.wcard} title="推测来源" size="small">
-              <Draggable />
-            </Card>
-            <Card className={styles.wcard} title="关联分析" size="small">
-              <Relation />
-            </Card>
-          </div>
-        )}
+    <>
+      <div className={cls(styles.main, store.activeState ? '' : styles.normal_main)}>
+        <div className={styles.head}>Inference & QA </div>
+        <div
+          className={cls(
+            styles.context,
+            store.activeState ? styles.context_active : styles.context_normal,
+          )}
+        >
+          <Searchs onChange={store.search} />
+        </div>
       </div>
-    </div>
+      {/* <div> */}
+      {store.activeState && (
+        <div className={cls(styles.result, 'body-wrapper')}>
+          <Card className={styles.card} title="答案" size="small">
+            <span>这是一段答案</span>
+          </Card>
+          <Card className={styles.card} title="推测来源" size="small">
+            <Text text={store.text} keywords={store.keywords} />
+          </Card>
+          <Card className={styles.wcard} title="线索依据" size="small">
+            <Tables />
+          </Card>
+        </div>
+      )}
+      {/* </div> */}
+    </>
   ));
 };
 

@@ -17,6 +17,9 @@ const Searchs: FC<SearchsProps> = ({ onChange }) => {
     handleChange: (index: number) => {
       store.checked = index;
     },
+    ask: () => {
+      alert('语音');
+    },
   }));
   return useObserver(() => (
     <div className={styles.content}>
@@ -38,7 +41,15 @@ const Searchs: FC<SearchsProps> = ({ onChange }) => {
           <Button style={{ background: '#e48800', padding: '0 24px', color: '#fff' }}>搜索</Button>
         }
         size="large"
-        suffix={<AudioOutlined />}
+        suffix={
+          <AudioOutlined
+            style={{
+              fontSize: 20,
+              paddingRight: 4,
+            }}
+            onClick={() => store.ask()}
+          />
+        }
         onSearch={onChange}
       />
     </div>

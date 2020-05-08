@@ -15,7 +15,12 @@ const Text: FC<TextProps> = ({ text, keywords }) => {
       </span>
     );
   });
-  return useObserver(() => <div className={styles.text}>{paragraph}</div>);
+  return useObserver(() => (
+    <div>
+      <span className={styles.tag}>阅读理解</span>
+      <div className={styles.text}>{paragraph}</div>
+    </div>
+  ));
 };
 
 //  [1,3],[5,8]

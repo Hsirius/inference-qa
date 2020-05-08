@@ -13,7 +13,8 @@ const Tables = () => {
     data: [
       {
         key: '1',
-        name: '胡彦斌',
+        name:
+          '快放假as了多久法拉盛建档立卡福建省砥砺奋进拉我积极fail省经费Lisa减肥俩设计费俩塞进来覅敬爱为减肥了防守打法发生地附近了as放',
         age: 32,
         address: '西湖区湖底公园1号',
       },
@@ -28,31 +29,32 @@ const Tables = () => {
   return useObserver(() => (
     <div className={styles.table}>
       <Table
-        // rowClassName={() => 'editable-row'}
+        rowClassName={() => 'editable-row'}
         rowKey="key"
         dataSource={store.data}
         pagination={false}
-        bordered
-        // onHeaderRow={() => {
-        // }}
+        className="custom_table"
         // size="small"
       >
         <Table.Column
-          title="名称"
+          title="与问题匹配线索"
           dataIndex="name"
+          width="35%"
           render={text => {
             return text;
           }}
         />
         <Table.Column
-          title="名称"
+          title="线索实体"
           dataIndex="age"
+          width="25%"
           render={text => {
             return text;
           }}
         />
         <Table.Column
-          title="名称"
+          title="实体相关情报"
+          width="40%"
           dataIndex="address"
           render={text => {
             return text;
