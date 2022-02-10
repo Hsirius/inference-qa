@@ -62,7 +62,7 @@
         "lodash": "^4.17.15",
         "mobx": "^5.15.0",
         "mobx-react-lite": "^1.4.1",
-        "node-sass": "^4.13.1",
+        "node-sass": "^7.0.0",
         "postcss-preset-env": "^6.7.0",
         "prettier": "^1.18.2",
         "qs": "^6.9.3",
